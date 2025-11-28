@@ -1,0 +1,46 @@
+{
+  // Pill separators
+  "custom/pill-left": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/pill-right": {
+    "format": "",
+    "tooltip": false
+  },
+
+  // System modules
+  "cpu": {
+    "format": "󰆧 {}%",
+    "format-alt": "󰆧 {avg}%",
+    "interval": 5
+  },
+  "memory": {
+    "format": "󰍛 {}%", 
+    "interval": 5
+  },
+  "clock": {
+    "format": "{:%H:%M\n%d/%m}",
+    "format-alt": "{:%A, %B %d, %Y}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+
+  // Hardware modules
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 Muted",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": "󰂄 {capacity}%"
+  },
+  "network": {
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀 {ifname}", 
+    "format-disconnected": "󰖪 Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+  }
+}
