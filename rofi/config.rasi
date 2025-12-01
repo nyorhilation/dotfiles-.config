@@ -1,0 +1,99 @@
+* {
+
+    active-background: #6C625A;
+    active-foreground: @foreground;
+
+    normal-background: @background;
+    normal-foreground: @foreground;
+
+    urgent-background: #544E49;
+    urgent-foreground: @foreground;
+
+    alternate-active-background: @background;
+    alternate-active-foreground: @foreground;
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+    alternate-urgent-background: @background;
+    alternate-urgent-foreground: @foreground;
+
+    selected-active-background: #544E49;
+    selected-active-foreground: @foreground;
+
+    selected-normal-background: #6C625A;
+    selected-normal-foreground: @foreground;
+
+    selected-urgent-background: #A03032;
+    selected-urgent-foreground: @foreground;
+
+    /* Base colors */
+    background-color: @background;
+    background: #0d0d0c;
+    foreground: #c7c1bc;
+
+    /* Variables used in layout */
+    fg: #c7c1bc;
+    button: #6C625A;
+
+    border-color: @background;
+}
+
+configuration {
+	modi:				"drun";
+	font:				"JetBrains Mono 10";
+	display-drun: 			"";
+	drun-display-format: "{name}";
+}
+
+window {
+    transparency: "real";
+    width: 30%; 
+}
+
+entry {
+    placeholder: "Pesquisar";
+    placeholder-color: @fg;
+    expand: true;
+    padding: 1.5%;
+    border-radius: 8px;
+}
+
+inputbar {
+    children: [ entry ];
+    background-image: url("/home/ellen/Pictures/wallpaper/norahwall.png");
+    border-radius: 0px 0 0px 0px;
+    padding: 100px 30px 30px 30px;
+}
+
+listview {
+    columns: 2;
+    lines: 5;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+    padding: 30px 30px 30px 30px;
+    scrollbar: false;
+}
+
+
+mainbox {
+    children: [ inputbar, listview ];
+}
+
+element {
+    orientation: vertical;
+    padding: 1.5% 0% 1.5% 0%;
+    border-radius: 8px;
+}
+
+element-text {
+    expand: true;
+    vertical-align: 0.5;
+    margin: 0.5% 1% 0% 2%;
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element selected {
+    background-color: @button;
+    border-radius: 8px;
+}
